@@ -1,0 +1,103 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Document</title>
+    <link rel="stylesheet" href="/static/index.css" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Kadwa:wght@400;700&family=Oleo+Script:wght@400;700&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <center>
+        <h1 class="heading">To-Do App</h1>
+    
+    <div class="content">
+        <div class="task_input">
+            <center>
+            <form action="" method="post">
+              <table class="first-row">
+                <tr>
+                  <th>Task id</th>
+                  <th>
+                    <input
+                      name="task_id"
+                      type="number"
+                      required
+                      min="1"
+                      max="99999"
+                    />
+                  </th>
+                  <th>Task Name</th>
+                  <th>
+                    <input
+                      name="task_name"
+                      type="text"
+                      required
+                      maxlength="19"
+                    />
+                  </th>
+                </tr>
+              </table>
+
+              <table class="second-row">
+                <tr>
+                  <th>Deadline</th>
+                  <th><input name="task_date" type="date" required /></th>
+                </tr>
+              </table>
+
+              <table class="third-row">
+                <tr>
+                  <th>Remarks</th>
+                  <th>
+                    <input
+                      name="task_remarks"
+                      class="remarks"
+                      type="text"
+                      required
+                      maxlength="99"
+                    />
+                  </th>
+                </tr>
+              </table>
+
+              <button class="button-submit" type="submit">Submit</button>
+            </form>
+            </center>
+        </div>
+
+
+        <div class="show">
+          <table class="answer">
+            {%if data %}
+            <tr class="answer">
+              <th class="answer-th-main">Task Id</th>
+              <th class="answer-th-main">Task Name</th>
+              <th class="answer-th-main">Deadline</th>
+              <th class="answer-th-main">Remarks</th>
+              <th class="answer-th-main">Delete</th>
+            </tr>
+            {% for task_id,task_name,task_date,task_remarks in data %}
+            <tr class="answer-tr">
+              <th class="answer-th">{{task_id}}</th>
+              <th class="answer-th">{{task_name}}</th>
+              <th class="answer-th">{{task_date}}</th>
+              <th class="answer-th">{{task_remarks}}</th>
+              <th class="answer-th">
+                <button class="del-button"><a  style="all: unset"href="{{ url_for('delete',task_id=task_id) }}">Delete</a>
+                </button>
+              </th>
+            </tr>
+
+            {% endfor %} {% endif %}
+          </table>
+        </div>
+    </div>
+</center>
+  </body>
+</html>

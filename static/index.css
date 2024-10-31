@@ -1,0 +1,84 @@
+
+.heading {
+    font-family: "Kadwa", serif;
+    font-weight: 700;
+    font-style: normal;
+  }
+
+.task_input
+{
+    height: 300px;
+    width: 600px;
+    background-color: #ECEAEA;
+    border: solid black 2px;
+}
+
+.first-row
+{
+    padding: 20px;
+}
+.third-row
+{
+    padding:20px;
+}
+
+th
+{
+    padding: 10px;
+    font-size: 18px;
+}
+
+input
+{
+    font-size: 18px;
+    width:150px;
+    color: red;
+}
+
+.remarks
+{
+    width: 300px;
+}
+
+.button-submit
+{
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    background-color: #0CFF07;
+    color: black;
+    border-radius: 5px;
+    font-size: larger;
+}
+
+.answer
+{
+    margin-top: 10px;
+}
+
+.answer, .answer-th, .answer-td {
+    border: 1px solid;
+}
+.answer-th-main
+{
+    border: 1px solid;
+    background-color: skyblue;
+}
+
+.show
+{
+    margin: 20px;
+}
+
+.del-button
+{
+    background-color: rgb(244, 107, 107);
+    padding-top: 5px;
+    padding-bottom: 5px;
+    padding-left: 10px;
+    padding-right: 10px;
+    color: black;
+    border-radius: 5px;
+    font-size: medium;
+}
