@@ -45,6 +45,9 @@ A simple To-Do app built using **Python Flask**. This app allows users to create
 │       └── index.css        # CSS styling for the app
 └── README.md                # Project documentation
 ```
+## Screenshots
+
+![Home Page](Screenshot/todo-app.png)
 
 ## Usage
 
